@@ -1,5 +1,8 @@
 package com.company;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 /**
  * Created by yuhy on 2018/8/13
  * sendEmail 发件人地址
@@ -10,6 +13,10 @@ package com.company;
  */
 public class SendEmailUtil {
     public static void sendMail(String sendMail,String sendEmailPwd,String title,String content,String[] toEmailAddress)throws Exception{
+        Properties properties = new Properties();
 
+        FileInputStream in = new FileInputStream("");  //自定义配置文件地址
+        properties.load(in);
+        in.close();
     }
 }
